@@ -24,8 +24,8 @@ export default function KeyGenerator() {
 
         <button onClick={generate} className='button'>Generate</button>
 
-        {privateKey && <div className='label'>private key: {privateKey} </div>}
-        {address && <div className='label'>address: {privateKey} </div>}
+        {privateKey && <div className='label'>private key: <span>{privateKey}</span> </div>}
+        {address && <div className='label'>address: {address} </div>}
     </div>
   )
 }

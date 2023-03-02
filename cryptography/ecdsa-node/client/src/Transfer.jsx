@@ -1,7 +1,9 @@
 import { useState } from "react";
 import server from "./server";
 
-function Transfer({ address, setBalance }) {
+
+
+function Transfer({ address, setBalance ,signature,trx}) {
   const [sendAmount, setSendAmount] = useState("");
   const [recipient, setRecipient] = useState("");
 
@@ -9,15 +11,11 @@ function Transfer({ address, setBalance }) {
 
   async function transfer(evt) {
     evt.preventDefault();
-
+    console.log(trx)
     try {
       const {
         data: { balance },
-      } = await server.post(`send`, {
-        sender: address,
-        amount: parseInt(sendAmount),
-        recipient,
-      });
+      } = await server.post(`send`, trx);
       setBalance(balance);
     } catch (ex) {
       alert(ex.response.data.message);
@@ -29,22 +27,15 @@ function Transfer({ address, setBalance }) {
       <h1>Send Transaction</h1>
 
       <label>
-        Send Amount
-        <input
-          placeholder="1, 2, 3..."
-          value={sendAmount}
-          onChange={setValue(setSendAmount)}
-        ></input>
+        Transaction Signature
+        <textarea 
+          className="signature"
+          placeholder="Create your singature by signing your trx"
+          value={signature}
+          disabled
+        ></textarea >
       </label>
 
-      <label>
-        Recipient
-        <input
-          placeholder="Type an address, for example: 0x2"
-          value={recipient}
-          onChange={setValue(setRecipient)}
-        ></input>
-      </label>
 
       <input type="submit" className="button" value="Transfer" />
     </form>

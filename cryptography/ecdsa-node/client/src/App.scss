@@ -23,7 +23,7 @@ label {
 }
 
 .container {
-  flex-grow: 1;
+  min-width: 300px;
   margin: 0 20px;
   background-color: #fff;
   border: 1px solid #cbd5e0;
@@ -52,6 +52,20 @@ input {
   background-color: #fdfdfe;
   padding-inline-start: 0.75rem;
   font-size: 0.875rem;
+}
+
+textarea {
+  padding: 10px 12px;
+  border-radius: 0.125rem;
+  border: 1px solid rgb(226, 232, 240);
+  background-color: #fdfdfe;
+  padding-inline-start: 0.75rem;
+  font-size: 0.875rem;
+  max-width: 285px;
+  min-width: 285px;
+  height: 150px;
+  max-height: 150px;
+  min-height:150px;
 }
 
 .button {
@@ -88,6 +102,28 @@ input {
 .transfer {
   display: flex;
   flex-direction: column;
+}
+
+.keyGenerator{
+  width: 734px;
+
+  .label{
+    color: #319795;
+    margin: 10px 10px;
+
+    span{
+      font-weight: 700;
+      font-size:16px;
+    }
+  }
+}
+
+.balanceList {
+  min-width: 300px;
+}
+
+.signature {
+  word-wrap: break-word;
 }
 
 

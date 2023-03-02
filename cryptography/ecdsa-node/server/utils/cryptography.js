@@ -7,7 +7,7 @@ function generate() {
 
   console.log("Private Key: ", toHex(privateKey));
 
-  const publicKey = secp.getPublicKey(privateKey);
+  const publicKey = secp.getPublicKey(toHex(privateKey));
 
   console.log("Public Key: ", toHex(publicKey));
 
@@ -27,4 +27,4 @@ function getAddress(publicKey) {
   return toHex(address.slice(-20));
 }
 
-module.exports = { generate };
+module.exports = { generate,getAddress };
