@@ -27,7 +27,7 @@ function App() {
       />
       <Sign address={address} setAddress={setAddress} setTrx={setTrx} setSignature={setSignature} nonce={nonce}  />
       <Transfer setBalance={setBalance} address={address} signature={signature}  trx={trx} />
-      <BalanceList/>
+      <BalanceList balance={balance}/>
       <KeyGenerator/>
     </div>
   );

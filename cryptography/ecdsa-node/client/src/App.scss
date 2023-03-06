@@ -120,6 +120,15 @@ textarea {
 
 .balanceList {
   min-width: 300px;
+
+  p{
+    border-bottom: 1px;
+  }
+
+  span{
+    font-weight: 700;
+    margin-left: 8px;
+  }
 }
 
 .signature {
