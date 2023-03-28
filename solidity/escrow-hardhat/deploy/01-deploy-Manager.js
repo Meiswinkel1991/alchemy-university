@@ -29,6 +29,8 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
     await verify(managerContract.address, [
       deployImplementationContract.address,
     ]);
+
+    await verify(deployImplementationContract.address, []);
   }
 };
 

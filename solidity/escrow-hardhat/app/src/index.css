@@ -1,7 +1,16 @@
 body {
   background-color: #eee;
   display: flex;
+  min-width: 100vw;
   font-family: 'Muli', sans-serif;
+}
+
+#root {
+  min-width: 100%;
+}
+.container {
+  min-width: 560px;
+  margin: 0 auto;
 }
 
 .contract, .existing-contracts {
@@ -10,6 +19,63 @@ body {
   padding: 40px;
   border: 1px solid #ddd;
   background-color: #fff;
+  border-radius: 1.2rem;
+}
+
+
+
+.header {
+  max-width: 560px;
+  margin: 4px auto;
+  background-color: #fff;
+  border-radius: 1.2rem;
+  border: 1px solid #ddd;
+  padding: 4px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  margin: 10px;
+  font-size: x-large;
+  border: none;
+  font-weight: 600;
+}
+
+.header h3 {
+  font-size: large;
+  font-weight: 600;
+  color: #f58427;
+}
+
+.header button {
+  background-color: #f58427;
+  border-radius: 2rem;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 20px;
+  padding: 9px 25px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: 1px solid #f58427;
+}
+
+.header button:hover {
+  background-color: white;
+  color: #f58427;
+  
+}
+
+
+
+.web3kit {
+  display: flex ;
+  justify-content: space-between;
+  align-items: center;
 }
 
 h1 {
@@ -31,8 +97,16 @@ input[type="text"] {
   font-size: 18px;
 }
 
+.contract-container {
+  display: flex;
+  min-width: 100%;
+  justify-content: space-around;
+  align-items: start;
+}
+
 .button {
   background-color: #f58427;
+  border-radius: 2rem;
   color: white;
   text-align: center;
   font-weight: bold;
@@ -42,6 +116,11 @@ input[type="text"] {
   font-size: 14px;
   letter-spacing: 1px;
   cursor: pointer;
+  border: 1px solid #f58427;
+}
+
+.button:disabled {
+  background-color: gray;
 }
 
 .existing-contract ul {

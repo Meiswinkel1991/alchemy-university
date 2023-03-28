@@ -36,6 +36,7 @@ module.exports = {
   solidity: "0.8.17",
   paths: {
     artifacts: "./app/src/artifacts",
+    deployments: "./app/src/deployments",
   },
   networks: {
     hardhat: {
@@ -92,7 +93,7 @@ module.exports = {
       chainId: 80001,
     },
   },
-  defaultNetwork: "sepolia",
+  defaultNetwork: "hardhat",
   etherscan: {
     // yarn hardhat verify --network <NETWORK> <CONTRACT_ADDRESS> <CONSTRUCTOR_PARAMETERS>
     apiKey: {
